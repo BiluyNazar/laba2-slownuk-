@@ -1,0 +1,26 @@
+z = input("select a or b: ")
+if z == "a":
+    q = 0
+    a = str(input())
+    a = list(a)
+    for i in a:
+        if i == " ":
+            continue
+        else:
+            q += 1
+    print(q)
+else:
+    b = input("Enter: ").split()
+    b.sort()
+    z = sorted(set(b), key=lambda x: b.index(x))
+    for i in z:
+        number = len(i)
+        if number > 3:
+            print(i)
+        else:
+            continue
+    alfavet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'w', 'x', 'y', 'z']
+    letters = "".join(z)
+    for i in set(letters):
+        print('{}-{}'.format(i, letters.count(i)))
